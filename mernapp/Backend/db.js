@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const mongoURI = 'mongodb+srv://GFood:GFood@cluster0.uopgu7q.mongodb.net/GFood?retryWrites=true&w=majority';
+const mongoURLL = 'mongodb+srv://GFood:GFood@cluster0.uopgu7q.mongodb.net/GFood?retryWrites=true&w=majority';
 
 const mongoDB = async () => {
 
     mongoose.set("strictQuery",false);
-    mongoose.connect(mongoURI, { useNewUrlParser: true }, async (err, result) => {
+    mongoose.connect(mongoURLL, { useNewUrlParser: true }, async (err, result) => {
         if (err) console.log("-------", err)
 
         else {
